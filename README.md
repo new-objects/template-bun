@@ -1,21 +1,16 @@
-<!-- Create a Readme for a Node.js template which serves a Website via HTML -->
-
-# Template: Node.js + Express
+# Template: Bun + Elysia
 
 ## Usage
 
 ```bash
-# Install dependencies
-npm install
-
 # Init husky
-npm run prepare
+bun prepare
 
 # Run dev server
-npm run dev
+bun dev
 
 # Format code (eslint and prettier)
-npm run format
+bun format
 ```
 
 ## License
