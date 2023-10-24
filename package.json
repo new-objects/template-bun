@@ -4,7 +4,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "bun run --hot ./src/index.js",
+    "dev": "bun run --watch ./src/index.js",
     "lint": "bunx eslint src",
     "prepare": "husky install",
     "lint:fix": "bun run lint -- --fix",
@@ -15,17 +15,19 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "express": "^4.18.2"
-  },
   "devDependencies": {
+    "@new-objects/eslint-config": "^0.0.3",
+    "@new-objects/prettier-config": "^0.0.2",
+    "bun-types": "latest",
     "eslint": "^8.51.0",
     "eslint-config-prettier": "^9.0.0",
     "husky": "^8.0.3",
-    "prettier": "^3.0.3",
-    "bun-types": "latest"
+    "prettier": "^3.0.3"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "elysia": "^0.7.18"
   }
 }

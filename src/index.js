@@ -1,15 +1,8 @@
-import express from "express";
+import { Elysia } from 'elysia';
 
-const app = express();
 const port = 3000;
+const app = new Elysia();
 
-// get the current directoryof the current script without the file name
-const __dirname = new URL(".", import.meta.url).pathname;
-const root = __dirname.replace("src", "");
+app.get('/', () => 'Hello Elysia').listen(port);
 
-app.use(express.static(root + "/public"));
-app.get("/", (req, res) => res.sendFile("index.html"));
-
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}!`);
-});
+console.log(`Example app listening on port ${app.server.port}!`);
